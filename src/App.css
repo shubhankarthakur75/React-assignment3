@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background: linear-gradient(to bottom, #cee5d0, #f3f0d7, #fed2aa, #ffbf86);
+  height: 94vh;
+  padding-top: 40px;
+}
+
+.App h1 {
+  margin: 0px;
 }
 
 .App-logo {
