@@ -28,6 +28,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Hello</h1>
+
         {this.state.display === "form" ? (
           <h1>EMPLOYEE FEEDBACK FORM</h1>
         ) : this.state.display === "feedback" ? (
