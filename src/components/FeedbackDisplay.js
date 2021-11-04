@@ -15,7 +15,7 @@ class FeedbackDisplay extends Component {
             );
           })}
         </div>
-        <div class="go-back-btn-container">
+        <div className="go-back-btn-container">
           <button
             onClick={() => this.props.displayComponent("form")}
             className="go-back-btn"

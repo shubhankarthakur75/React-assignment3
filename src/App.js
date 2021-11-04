@@ -5,20 +5,20 @@ import FeedbackDisplay from "./components/FeedbackDisplay";
 
 class App extends Component {
   state = {
-    employee: [],
+    employeeArray: [],
     display: "form",
   };
 
-  getFeedback = (name, department, rating) => {
-    const temp = [...this.state.employee];
+  getFeedback = (id, name, department, rating) => {
+    const temp = [...this.state.employeeArray];
     const newEmployee = {
-      id: this.state.employee.length,
+      id,
       name,
       department,
       rating,
     };
     temp.push(newEmployee);
-    this.setState({ employee: temp, display: "feedback" });
+    this.setState({ employeeArray: temp, display: "feedback" });
   };
 
   displayComponent = (component) => {
@@ -33,11 +33,12 @@ class App extends Component {
         ) : this.state.display === "feedback" ? (
           <h1>EMPLOYEE FEEDBACK DATA</h1>
         ) : null}
+
         {this.state.display === "form" ? (
           <Form submitHandler={this.getFeedback} />
         ) : (
           <FeedbackDisplay
-            employeeList={this.state.employee}
+            employeeList={this.state.employeeArray}
             displayComponent={this.displayComponent}
           />
         )}
